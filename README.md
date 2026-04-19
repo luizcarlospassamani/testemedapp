@@ -2,23 +2,34 @@
 
 Aplicativo iOS SwiftUI para controle hospitalar com Firestore e notificações locais.
 
+## ✅ Abrir no Xcode (macOS)
+
+1. Clone o repositório.
+2. Abra **`GOHelp.xcodeproj`** no Xcode.
+3. Aguarde o Xcode resolver os pacotes SwiftPM (Firebase).
+4. Em **Signing & Capabilities**, selecione seu **Team**.
+5. Rode no simulador (ou iPhone).
+
 ## Estrutura
 
-- `App/` inicialização do app e Firebase
-- `Models/` modelos de domínio
-- `ViewModels/` lógica MVVM
-- `Views/` telas SwiftUI
-- `Services/` integração Firestore
-- `Managers/` notificações locais
+- `GOHelp.xcodeproj` projeto iOS pronto para abrir no Xcode
+- `GOHelp/` código-fonte do app
+  - `App/` inicialização do app e Firebase
+  - `Models/` modelos de domínio
+  - `ViewModels/` lógica MVVM
+  - `Views/` telas SwiftUI
+  - `Services/` integração Firestore
+  - `Managers/` notificações locais
+  - `Resources/Assets.xcassets` assets do app
 
 ## Firebase (importante)
 
-1. No Xcode, adicione o package:
+1. O projeto já referencia o package:
    - `https://github.com/firebase/firebase-ios-sdk`
-2. Selecione os produtos:
+2. Produtos usados:
    - `FirebaseCore`
    - `FirebaseFirestore`
-3. Arraste `GoogleService-Info.plist` para o projeto e marque o target do app.
+3. O arquivo `GOHelp/GoogleService-Info.plist` já está incluído no target.
 4. `FirebaseApp.configure()` já está no `GOHelpApp`.
 
 ## Observações
